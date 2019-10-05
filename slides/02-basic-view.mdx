@@ -1,0 +1,304 @@
+import { CodeSurferLayout } from 'code-surfer'
+
+###### ...let's flashback to Android Basic.
+
+![gif](https://media1.tenor.com/images/c8dc1878de1cdbe4bc8edda07f9669fd/tenor.gif)
+
+---
+
+#### Create new Android Project.
+
+---
+
+<CodeSurferLayout>
+
+```xml title='ViewGroup' subtitle='LinearLayout'
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+</LinearLayout>
+```
+
+```xml 2[27:38]
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+</LinearLayout>
+```
+
+```xml 3[28:39] 
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+</LinearLayout>
+```
+
+```xml 4[26:33] subtitle='Orientation'
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+</LinearLayout>
+```
+
+```xml 4[26:35]
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+</LinearLayout>
+```
+
+```xml
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <!-- Include other widget or layout tags here. These are considered
+    "child views" or "children" of the linear layout -->
+
+</LinearLayout>
+```
+
+```xml 1,6,7,9 subtitle='RelativeLayout'
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- Include other widget or layout tags here. These are considered
+    "child views" or "children" of the relative layout -->
+
+</RelativeLayout>
+```
+
+```xml 1:14 title='Create simple form'
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="Masukkan nama Anda"/>
+
+</LinearLayout>
+```
+
+```xml 
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="Masukkan nama Anda"/>
+
+</LinearLayout>
+```
+
+```xml
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="Masukkan nama Anda"/>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="submit"/>
+
+</LinearLayout>
+```
+
+```xml
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="Masukkan nama Anda"/>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="submit"/>
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="24sp" />
+
+</LinearLayout>
+```
+
+```
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+```
+
+```kotlin subtitle='inisialisasi biasa dengan kemungkinan variable null'
+class MainActivity : AppCompatActivity() {
+
+    var etNama: EditText? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etNama = findViewById(R.id.et_nama)
+
+    }
+}
+```
+
+```kotlin subtitle='lateinit -> tidak akan null'
+class MainActivity : AppCompatActivity() {
+
+    var etNama: EditText? = null
+    lateinit var btnSubmit: Button
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etNama = findViewById(R.id.et_nama)
+        btnSubmit = findViewById(R.id.btn_submit)
+
+    }
+}
+```
+
+```kotlin subtitle='tambahkan aksi klik'
+class MainActivity : AppCompatActivity() {
+
+    var etNama: EditText? = null
+    lateinit var btnSubmit: Button
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etNama = findViewById(R.id.et_nama)
+        btnSubmit = findViewById(R.id.btn_submit)
+
+        btnSubmit.setOnClickListener {
+
+        }
+
+    }
+}
+```
+
+```kotlin subtitle='Using kotlinx'
+class MainActivity : AppCompatActivity() {
+
+    var etNama: EditText? = null
+    lateinit var btnSubmit: Button
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etNama = findViewById(R.id.et_nama)
+        btnSubmit = findViewById(R.id.btn_submit)
+
+        btnSubmit.setOnClickListener {
+            hasil.text = etNama?.text.toString()
+        }
+
+    }
+}
+```
+
+```kotlin 1:18
+class MainActivity : AppCompatActivity() {
+
+    var etNama: EditText? = null
+    lateinit var btnSubmit: Button
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etNama = findViewById(R.id.et_nama)
+        btnSubmit = findViewById(R.id.btn_submit)
+
+        btnSubmit.setOnClickListener {
+            hasil.text = etNama?.text.toString()
+        }
+
+    }
+}
+```
+
+```kotlin subtitle='with kotlinx -> less code'
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        btn_submit.setOnClickListener {
+            hasil.text = et_nama.text.toString()
+        }
+
+    }
+}
+```
+
+</CodeSurferLayout>
+
+---
+
+###### Okay, let's make simple exercise...
+
+![gif](https://im.ezgif.com/tmp/ezgif-1-0bd5a2c1ed97.gif)

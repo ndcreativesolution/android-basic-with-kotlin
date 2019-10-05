@@ -1,0 +1,466 @@
+import { CodeSurferLayout } from 'code-surfer'
+
+#### Create Activity Profile.
+
+---
+<CodeSurferLayout>
+
+```xml subtitle='Parent Layout -> LinearLayout'
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+</LinearLayout>
+```
+
+```xml subtitle='Tambahkan gambar'
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background" />
+
+</LinearLayout>
+```
+
+```xml subtitle='tambahkan TextView untuk nama'
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+```
+
+```xml subtitle='tambahkan TextView untuk gender'
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Gender" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+```
+
+```xml subtitle='tambahkan TextView untuk email'
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Gender" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+```
+
+```xml subtitle='tambahkan TextView untuk phone'
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Gender" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Telpon" />
+
+    <TextView
+        android:id="@+id/tv_telp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+```
+
+```xml subtitle='tambahkan TextView untuk alamat'
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Gender" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Telpon" />
+
+    <TextView
+        android:id="@+id/tv_telp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Alamat" />
+
+    <TextView
+        android:id="@+id/tv_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+```
+
+```kotlin subtitle='Edit Profile Activity kotlin'
+class ProfileActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_profile)
+
+    }
+}
+```
+
+```kotlin subtitle='Inisialisasi View'
+class ProfileActivity : AppCompatActivity() {
+
+    var tvName: TextView? = null
+    var tvGender: TextView? = null
+    var tvEmail: TextView? = null
+    var tvTelp: TextView? = null
+    var tvAlamat: TextView? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_profile)
+
+    }
+}
+```
+
+```kotlin
+class ProfileActivity : AppCompatActivity() {
+
+    var tvName: TextView? = null
+    var tvGender: TextView? = null
+    var tvEmail: TextView? = null
+    var tvTelp: TextView? = null
+    var tvAlamat: TextView? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_profile)
+
+        tvName = findViewById(R.id.tv_name)
+        tvGender = findViewById(R.id.tv_gender)
+        tvEmail = findViewById(R.id.tv_email)
+        tvTelp = findViewById(R.id.tv_telp)
+        tvAlamat = findViewById(R.id.tv_alamat)
+
+    }
+}
+```
+
+```kotlin subtitle='Bikin fungsi getData'
+class ProfileActivity : AppCompatActivity() {
+
+    var tvName: TextView? = null
+    var tvGender: TextView? = null
+    var tvEmail: TextView? = null
+    var tvTelp: TextView? = null
+    var tvAlamat: TextView? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_profile)
+
+        tvName = findViewById(R.id.tv_name)
+        tvGender = findViewById(R.id.tv_gender)
+        tvEmail = findViewById(R.id.tv_email)
+        tvTelp = findViewById(R.id.tv_telp)
+        tvAlamat = findViewById(R.id.tv_alamat)
+
+    }
+
+    private fun ambilData() {
+        val bundle = intent.extras
+
+        tvName?.text = bundle?.getString("name")
+        tvGender?.text = bundle?.getString("gender")
+        tvEmail?.text = bundle?.getString("email")
+        tvTelp?.text = bundle?.getString("telp")
+        tvAlamat?.text = bundle?.getString("alamat")
+    }
+}
+```
+
+```kotlin subtitle='Panggil Fungsi getData menggunakan bundle'
+class ProfileActivity : AppCompatActivity() {
+
+    var tvName: TextView? = null
+    var tvGender: TextView? = null
+    var tvEmail: TextView? = null
+    var tvTelp: TextView? = null
+    var tvAlamat: TextView? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_profile)
+
+        tvName = findViewById(R.id.tv_name)
+        tvGender = findViewById(R.id.tv_gender)
+        tvEmail = findViewById(R.id.tv_email)
+        tvTelp = findViewById(R.id.tv_telp)
+        tvAlamat = findViewById(R.id.tv_alamat)
+
+        ambilData()
+    }
+
+    private fun ambilData() {
+        val bundle = intent.extras
+
+        tvName?.text = bundle?.getString("name")
+        tvGender?.text = bundle?.getString("gender")
+        tvEmail?.text = bundle?.getString("email")
+        tvTelp?.text = bundle?.getString("telp")
+        tvAlamat?.text = bundle?.getString("alamat")
+    }
+}
+```
+
+```kotlin subtitle='Panggil Fungsi getData menggunakan Intent'
+class ProfileActivity : AppCompatActivity() {
+
+    var tvName: TextView? = null
+    var tvGender: TextView? = null
+    var tvEmail: TextView? = null
+    var tvTelp: TextView? = null
+    var tvAlamat: TextView? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_profile)
+
+        tvName = findViewById(R.id.tv_name)
+        tvGender = findViewById(R.id.tv_gender)
+        tvEmail = findViewById(R.id.tv_email)
+        tvTelp = findViewById(R.id.tv_telp)
+        tvAlamat = findViewById(R.id.tv_alamat)
+
+        ambilData()
+    }
+
+    private fun ambilData() {
+      
+        tvName?.text = intent.getStringExtra("name")
+        tvGender?.text = intent.getStringExtra("gender")
+        tvEmail?.text = intent.getStringExtra("email")
+        tvTelp?.text = intent.getStringExtra("telp")
+        tvAlamat?.text = intent.getStringExtra("alamat")
+    }
+}
+```
+</CodeSurferLayout>

@@ -1,0 +1,21 @@
+{
+  "name": "android-basic-with-kotlin",
+  "description": "Introduction to Android Basic with Kotlin - Saturday, 5th October 2019",
+  "version": "1.0.0",
+  "repository": "git@github.com:umarfadil/android-basic-with-kotlin.git",
+  "author": "Umar Fadil <iam@umarfadil.id>",
+  "scripts": {
+    "start": "mdx-deck deck.js",
+    "build": "mdx-deck build deck.js",
+    "now-build": "yarn build"
+  },
+  "devDependencies": {
+    "code-surfer": "^2.0.0-alpha.10",
+    "mdx-deck": "^2.5.1",
+    "mdx-deck-code-surfer": "^0.5.5"
+  },
+  "private": true,
+  "dependencies": {
+    "prism-react-renderer": "^1.0.1"
+  }
+}

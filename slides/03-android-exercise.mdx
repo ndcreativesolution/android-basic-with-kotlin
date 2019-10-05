@@ -1,0 +1,1030 @@
+import { CodeSurferLayout } from 'code-surfer'
+import nightOwl from "prism-react-renderer/themes/nightOwl"
+
+###### ...let's make this simple apps.
+
+![png](./assets/exercise.png)
+
+---
+
+#### Create new Android Project.
+
+---
+
+<CodeSurferLayout>
+
+```xml subtitle='Parent layout pakai LinearLayout'
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+</LinearLayout>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="Registrasi"
+        android:textSize="24sp" />
+
+</LinearLayout>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="Registrasi"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+</LinearLayout>
+```
+
+```xml 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="Registrasi"
+        android:textSize="24sp" />
+    
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/sp_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="Registrasi"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/sp_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress" />
+        
+</LinearLayout>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="Registrasi"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/sp_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress" />
+    
+    <EditText
+        android:id="@+id/et_telp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Telp."
+        android:imeOptions="actionNext"
+        android:inputType="number" />
+
+</LinearLayout>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="Registrasi"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/sp_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress" />
+    
+    <EditText
+        android:id="@+id/et_telp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Telp."
+        android:imeOptions="actionNext"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:hint="Alamat"
+        android:imeOptions="actionDone"
+        android:inputType="textImeMultiLine" />
+
+</LinearLayout>
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="Registrasi"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/sp_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress" />
+    
+    <EditText
+        android:id="@+id/et_telp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Telp."
+        android:imeOptions="actionNext"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:hint="Alamat"
+        android:imeOptions="actionDone"
+        android:inputType="textImeMultiLine" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFFFF"
+        android:foreground="?selectableItemBackground"
+        android:text="Simpan" />
+
+</LinearLayout>
+```
+
+```java subtitle='Edit MainActivity.kt'
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+```
+
+```java subtitle='Inisialisasi view...'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+```
+
+```java subtitle='Hubungkan view dengan Kotlin file...'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+    }
+}
+```
+
+```java subtitle='Tambahkan aksi klik ke button...'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            
+        }
+    }
+}
+```
+
+```java subtitle='membuat fungsi cek inputan...'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            
+        }
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+
+    }
+}
+```
+
+```java subtitle='membuat fungsi cek inputan...'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            
+        }
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+        }
+    }
+}
+```
+
+```java subtitle='membuat fungsi cek inputan...'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            
+        }
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+            else -> {
+                tampilkanToast("Navigasi ke halaman profile")
+            }
+        }
+    }
+}
+```
+
+```java subtitle='membuat fungsi menampilkan Toast...'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            
+        }
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+            else -> {
+                tampilkanToast("Navigasi ke halaman profile")
+            }
+        }
+    }
+
+    private fun tampilkanToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+}
+```
+
+```java subtitle='aplikasikan fungsi validasiInput() pada aksi tombol'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            validasiInput()
+        }
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+            else -> {
+                tampilkanToast("Navigasi ke halaman profile")
+            }
+        }
+    }
+
+    private fun tampilkanToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+}
+```
+
+```xml 4:8 title='Menambahkan option pilihan jenis kelamin' subtitle='tambahkan di strings.xml'
+<resources>
+    <string name="app_name">My Profile</string>
+
+    <string-array name="gender_list">
+        <item>Pilih jenis kelamin</item>
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+</resources>
+```
+
+```java 48:54
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            validasiInput()
+        }
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+            else -> {
+                tampilkanToast("Navigasi ke halaman profile")
+            }
+        }
+    }
+
+    private fun tampilkanToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setDataGender() {
+        val adapter = ArrayAdapter.createFromResource(this,
+            R.array.gender_list, android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
+        spGender?.adapter = adapter
+    }
+}
+```
+
+```java
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            validasiInput()
+        }
+        setDataGender()
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+        val inputGender = spGender?.selectedItem.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputGender.equals("Pilih jenis kelamin") -> tampilkanToast("Jenis Kelamin tidak boleh kosong")
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+            else -> {
+                tampilkanToast("Navigasi ke halaman profile")
+            }
+        }
+    }
+
+    private fun tampilkanToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setDataGender() {
+        val adapter = ArrayAdapter.createFromResource(this,
+            R.array.gender_list, android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
+        spGender?.adapter = adapter
+    }
+}
+```
+
+```kotlin title='Intent -> Pindah Activity'
+    val intent = Intent(this, ProfileActivity::class.java)
+    startActivity(intent)
+```
+
+```kotlin title='Intent with Data menggunakan Bundle'
+    val intent = Intent(this, ProfileActivity::class.java)
+
+    val bundle = Bundle()
+
+    bundle.putString("data1", "value")
+    bundle.putString("data2", "value")
+
+    intent.putExtras(bundle)
+
+    startActivity(intent)
+```
+
+```kotlin title='Mengirimkan data menggunakan Intent'
+    val intent = Intent(this, ProfileActivity::class.java)
+
+    intent.putExtra("data1", "value")
+    intent.putExtra("data2", "value")
+
+    startActivity(intent)
+```
+
+```kotlin title='Menerima data dari Intent' subtitle='Menggunakan Bundle'
+    val bundle = intent.extras
+    val nama = bundle?.getString("data1")
+
+    data1?.text = bundle?.getString("data1")
+    data2?.text = bundle?.getString("data2")
+```
+
+```kotlin title='Menerima data dari Intent' subtitle='Menggunakan Intent'
+
+    data1?.text = intent.getStringExtra("data1")
+    data2?.text = intent.getStringExtra("data2")
+```
+
+```java 42 title='Back to the code'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            validasiInput()
+        }
+        setDataGender()
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+        val inputGender = spGender?.selectedItem.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputGender.equals("Pilih jenis kelamin") -> tampilkanToast("Jenis Kelamin tidak boleh kosong")
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+            else -> {
+                tampilkanToast("Navigasi ke halaman profile")
+            }
+        }
+    }
+
+    private fun tampilkanToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setDataGender() {
+        val adapter = ArrayAdapter.createFromResource(this,
+            R.array.gender_list, android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
+        spGender?.adapter = adapter
+    }
+}
+```
+
+```java subtitle='Kirim data profile dengan bundle'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            validasiInput()
+        }
+        setDataGender()
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+        val inputGender = spGender?.selectedItem.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputGender.equals("Pilih jenis kelamin") -> tampilkanToast("Jenis Kelamin tidak boleh kosong")
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+            else -> {
+                val intent = Intent(this, ProfileActivity::class.java)
+
+                val bundle = Bundle()
+                bundle.putString("name", inputName)
+                bundle.putString("gender", inputGender)
+                bundle.putString("email", inputEmail)
+                bundle.putString("telp", inputTelp)
+                bundle.putString("alamat", inputAlamat)
+                intent.putExtras(bundle)
+
+                startActivity(intent)
+            }
+        }
+    }
+
+    private fun tampilkanToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setDataGender() {
+        val adapter = ArrayAdapter.createFromResource(this,
+            R.array.gender_list, android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
+        spGender?.adapter = adapter
+    }
+}
+```
+
+```java subtitle='Kirim data profile dengan Intent'
+class MainActivity : AppCompatActivity() {
+
+    var etName: EditText? = null
+    var spGender: Spinner? = null
+    var etEmail: EditText? = null
+    var etTelp: EditText? = null
+    var etAlamat: EditText? = null
+    var btnSimpan: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        etName = findViewById(R.id.et_name)
+        spGender = findViewById(R.id.sp_gender)
+        etEmail = findViewById(R.id.et_email)
+        etTelp = findViewById(R.id.et_telp)
+        etAlamat = findViewById(R.id.et_alamat)
+        btnSimpan = findViewById(R.id.btn_save)
+
+        btnSimpan?.setOnClickListener {
+            validasiInput()
+        }
+        setDataGender()
+    }
+
+    private fun validasiInput() {
+        val inputName = etName?.text.toString()
+        val inputEmail = etEmail?.text.toString()
+        val inputTelp = etTelp?.text.toString()
+        val inputAlamat = etAlamat?.text.toString()
+        val inputGender = spGender?.selectedItem.toString()
+
+        when {
+            inputName.isEmpty() -> etName?.error = "Nama tidak boleh kosong"
+            inputEmail.isEmpty() -> etEmail?.error = "Email tidak boleh kosong"
+            inputGender.equals("Pilih jenis kelamin") -> tampilkanToast("Jenis Kelamin tidak boleh kosong")
+            inputTelp.isEmpty() -> etTelp?.error = "Nomor Telpon tidak boleh kosong"
+            inputAlamat.isEmpty() -> etAlamat?.error = "Alamat Telpon tidak boleh kosong"
+
+            else -> {
+                val intent = Intent(this, ProfileActivity::class.java)
+
+                intent.putExtra("name", inputName)
+                intent.putExtra("gender", inputGender)
+                intent.putExtra("email", inputEmail)
+                intent.putExtra("telp", inputTelp)
+                intent.putExtra("alamat", inputAlamat)
+
+                startActivity(intent)
+            }
+        }
+    }
+
+    private fun tampilkanToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setDataGender() {
+        val adapter = ArrayAdapter.createFromResource(this,
+            R.array.gender_list, android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
+        spGender?.adapter = adapter
+    }
+}
+```
+
+</CodeSurferLayout>
+
+---
+
+###### Next, make Profile Page in new Activity...
+
+![gif](https://im.ezgif.com/tmp/ezgif-1-0bd5a2c1ed97.gif)
